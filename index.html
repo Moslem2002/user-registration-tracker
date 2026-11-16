@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>user-registration-tracker</title>
+  </head>
+  <body>
+    <div
+      class="w-4xl h-[420px] mx-auto mt-30 bg-gray-100 rounded-2xl font-Inter grid grid-cols-7 grid-rows-1"
+    >
+      <form
+        action="#"
+        class="form-js grid grid-cols-2 grid-rows-5 gap-y-4.5 items-center justify-items-start col-span-4 row-start-1 mx-5 pt-2"
+      >
+        <label
+          for=""
+          class="text-5xl font-bold text-indigo-700 justify-self-center col-span-2 block"
+          >User Registration</label
+        >
+
+        <div class="flex flex-col w-48">
+          <label for="First-Name" class="font-bold text-xl">First Name:</label>
+          <input
+            name="first-name"
+            type="text"
+            placeholder="Moslem"
+            autofocus
+            required
+            id="First-Name"
+            class="firstName-js bg-indigo-50 border-2 border-indigo-300 rounded-lg outline-none focus:ring-2 focus:ring-indigo-700 transition-all duration-300 px-3 py-1"
+          />
+        </div>
+
+        <div class="flex flex-col w-48">
+          <label for="last-Name" class="font-bold text-xl">Last Name:</label>
+          <input
+            name="last-name"
+            type="text"
+            placeholder="Bazgi"
+            required
+            id="last-Name"
+            class="lastName-js bg-indigo-50 border-2 border-indigo-300 rounded-lg outline-none focus:ring-2 focus:ring-indigo-700 transition-all duration-300 px-3 py-1"
+          />
+        </div>
+
+        <div class="flex flex-col w-48">
+          <label for="age" class="font-bold text-xl">Age:</label>
+          <input
+            name="age"
+            min="1"
+            type="number"
+            placeholder="24"
+            required
+            id="age"
+            class="age-js bg-indigo-50 border-2 border-indigo-300 rounded-lg outline-none focus:ring-2 focus:ring-indigo-700 transition-all duration-300 px-3 py-1"
+          />
+        </div>
+
+        <div class="flex flex-col w-48 self-end">
+          <label for="Email" class="font-bold text-xl">Email:</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="example@gmail.com"
+            required
+            id="Email"
+            class="email-js bg-indigo-50 border-2 border-indigo-300 rounded-lg outline-none focus:ring-2 focus:ring-indigo-700 transition-all duration-300 px-3 py-1"
+          />
+        </div>
+
+        <div class="flex flex-col w-30 self-end">
+          <label for="Position" class="font-bold text-xl">Position:</label>
+          <select
+            name="Position"
+            id="Position"
+            required
+            class="position-js bg-indigo-50 border-2 border-indigo-300 rounded-lg outline-none focus:ring-2 focus:ring-indigo-700 transition-all duration-300 px-3 py-1"
+          >
+            <option value="Developer">Developer</option>
+            <option value="Student" selected>Student</option>
+            <option value="Designer">Designer</option>
+          </select>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-indigo-700 rounded-lg outline-none transition-all duration-300 px-3 py-1 text-white hover:text-indigo-700 hover:bg-indigo-100 font-bold col-span-2"
+        >
+          submit
+        </button>
+      </form>
+
+      <div class="row-start-1 col-span-7 bg-indigo-700 rounded-e-2xl px-5">
+        <div class="flex items-center justify-between">
+          <h2 class="text-white text-3xl font-bold my-6">Registered users</h2>
+
+          <button
+            type="reset"
+            class="resetBTN-js hidden text-red-500 font-bold bg-gray-100 px-2 py-0.5 rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300"
+          >
+            Reset
+          </button>
+        </div>
+
+        <div
+          class="card-user-js h-[310px] overflow-y-auto flex flex-col gap-1.5"
+        ></div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
